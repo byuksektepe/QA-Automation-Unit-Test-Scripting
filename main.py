@@ -65,7 +65,6 @@ if __name__ == '__main__':
     google_chart_api_test_timing_data = google_chart_api_test_timing_data().start()
 
     read_in_data_test_analysis_data = read_in_data_test_analysis_data().start()
+    google_chart_api_test_analysis_data = google_chart_api_test_analysis_data().start()
 
-
-    #main.ch1()
 
