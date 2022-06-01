@@ -7,19 +7,19 @@ class google_chart_api_test:
     def start(self):
 
         column_chart_data = read_in_data_test().start()
-        html_string = Template("""
-        <html>
+        html_string = Template("""<html>
         <head>
         <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
         <script type="text/javascript">
           google.charts.load('current', {packages: ['corechart']});
           google.charts.setOnLoadCallback(drawChart);
           function drawChart () {
-              var data = google.visualization.arrayToDataTable([
-               $labels,
-               $data
-              ],
-              false); // 'false' means that the first row contains labels, not data.
+              var data = new google.visualization.DataTable();
+              data.addColumn('string', 'Element');
+              data.addColumn('number', '$labels');
+              data.addRows([
+                $data
+              ]);
             var chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
               chart.draw(data);
           }
@@ -30,12 +30,12 @@ class google_chart_api_test:
         </body>
         </html>""")
 
-        chart_data_str = ""
+        chart_data_str = ''
         for row in column_chart_data[1:]:
-            chart_data_str += '%s, \n' % row
+            chart_data_str += '%s,\n' % row
 
-        completed_html = html_string.substitute(labels= column_chart_data[0],
-                                                data= chart_data_str)
+        completed_html = html_string.substitute(labels=column_chart_data[0][1],
+                                                data=chart_data_str)
         file_date = date.today()
-        with open('column_chart'+file_date+'.html', 'w') as f:
+        with open('tests/test_docs/column_chart'+str(file_date)+'.html', 'w') as f:
             f.write(completed_html)

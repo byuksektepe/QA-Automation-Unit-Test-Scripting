@@ -1,3 +1,5 @@
+import time
+
 import requests
 from tests.read_in_data import read_in_data_test
 from tests.google_chart_api import google_chart_api_test

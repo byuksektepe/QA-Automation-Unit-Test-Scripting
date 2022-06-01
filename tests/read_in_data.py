@@ -18,8 +18,12 @@ class read_in_data_test:
 
             if not row[1] or not row[2]:
                 continue
-            current_run_time = float(row[1])
-            avg_run_time = float(row[2])
+            try:
+                current_run_time = float(row[1])
+                avg_run_time = float(row[2])
+            except:
+                print(row[1], row[2])
+
 
             diff_from_avg = avg_run_time - current_run_time
 
@@ -30,4 +34,4 @@ class read_in_data_test:
         print(table_data)
 
         return (column_chart_data)
-    pass
+
