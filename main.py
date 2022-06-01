@@ -2,7 +2,7 @@ import time
 
 import requests
 from tests.read_in_data import read_in_data_test_timing_data, read_in_data_test_analysis_data
-from tests.google_chart_api import google_chart_api_test_timing_data
+from tests.google_chart_api import google_chart_api_test_timing_data, google_chart_api_test_analysis_data
 
 class main:
 

@@ -1,6 +1,6 @@
 from string import Template
 from datetime import date
-from tests.read_in_data import read_in_data_test_timing_data
+from tests.read_in_data import read_in_data_test_timing_data, read_in_data_test_analysis_data
 
 
 class local_variables:
@@ -51,7 +51,7 @@ class google_chart_api_test_analysis_data:
 
     def start(self):
 
-        analysis_chart_data = read_in_data_test_timing_data().start()
+        analysis_chart_data = read_in_data_test_analysis_data().start()
 
         chart_data_str = ''
         for row in analysis_chart_data[1:]:
