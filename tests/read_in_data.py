@@ -1,7 +1,9 @@
 import csv
 
 class read_in_data_test_timing_data:
+
     timing_data = []
+
     def start(self):
 
         with open("./tests/test_docs/TestTimingData.csv") as test_csv_file:
@@ -16,6 +18,7 @@ class read_in_data_test_timing_data:
         for row in self.timing_data[1:]:
             test_name = row[0]
 
+            # if each rows have a null test result, skip that test
             if not row[1] or not row[2]:
                 continue
             try:
@@ -36,3 +39,16 @@ class read_in_data_test_timing_data:
         return (column_chart_data)
     pass
 
+class read_in_data_test_analysis_data:
+
+    analysis_data = []
+
+    def start(self):
+
+        with open("./tests/test_docs/TestAnalysisData.csv") as test_csv_file:
+            file_read = csv.reader(test_csv_file)
+
+            for row in file_read:
+                self._data.append(row)
+
+    pass
