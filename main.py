@@ -3,7 +3,7 @@ import requests
 class main:
 
     url = "https://jsonplaceholder.typicode.com/photos"
-    jsonPayload = {'albumId': 1, 'title': 'test',
+    jsonPayload = {'albumId': 6000, 'title': 'test',
                    'url': 'thisisatesturl.com', 'thumbnailUrl': 'thisisatesturl.com'}
 
     def rest_api_get():
@@ -24,8 +24,15 @@ class main:
         print(response.json())
     pass
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    main.rest_api_put()
+    def rest_api_delete():
+        response = requests.delete(main.url)
+        print(response)
+    pass
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+
+if __name__ == '__main__':
+    main.rest_api_get()
+    main.rest_api_post()
+    main.rest_api_put()
+    main.rest_api_delete()
+
