@@ -33,12 +33,30 @@ class main:
         url = "https://api.github.com/user"
         response = requests.get(url)
 
-        print(response.json()) #gives auth error
-        response = requests.get(url, auth=('djw-test', 'klklkllkl'))
+        response = requests.get(url, auth=('djw-test', 'password1'))
         print(response.json())  #user data comes
+    pass
+
+    def ch1():
+
+        response = requests.get(main.url)
+        json_data = response.json()
+
+        url_list = []
+        for photo in json_data:
+            url_list.append(photo['url'])
+
+        # see list len
+        list_len = len(url_list)
+        print("Raw Length: "+str(list_len))
+
+        # see set len
+        set_len = len(set(url_list))
+        print("Set Length: "+str(set_len)+" / Photos using same url: "+str(list_len-set_len))
+
 
 
 if __name__ == '__main__':
 
-    main.rest_api_auth()
+    main.ch1()
 
