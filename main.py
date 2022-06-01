@@ -29,10 +29,16 @@ class main:
         print(response)
     pass
 
+    def rest_api_auth():
+        url = "https://api.github.com/user"
+        response = requests.get(url)
+
+        print(response.json()) #gives auth error
+        response = requests.get(url, auth=('djw-test', 'klklkllkl'))
+        print(response.json())  #user data comes
+
 
 if __name__ == '__main__':
-    main.rest_api_get()
-    main.rest_api_post()
-    main.rest_api_put()
-    main.rest_api_delete()
+
+    main.rest_api_auth()
 
