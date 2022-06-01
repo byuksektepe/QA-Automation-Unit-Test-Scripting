@@ -1,4 +1,9 @@
 ﻿## QA Automation Unit Test Scripting
+ ![Python](https://img.shields.io/badge/Python-000000?style=for-the-badge&logo=python&logoColor=white)
+ ![Html5](https://img.shields.io/badge/HTML5-000000?style=for-the-badge&logo=html5&logoColor=white)
+ ![Git](https://img.shields.io/badge/GIT-000000?style=for-the-badge&logo=git&logoColor=white)
+
+
  <p>A QA Automation Unit Test for Data Science</p>
  <p>Included Tests Scenarios from <a href="https://github.com/Berkantyuks/QA-Automation-Unit-Test-Scripting/tree/main/tests">tests</a></p>
  
