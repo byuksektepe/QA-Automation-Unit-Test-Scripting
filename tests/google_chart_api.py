@@ -1,4 +1,5 @@
 from string import Template
+from itertools import chain
 from datetime import date
 from tests.read_in_data import read_in_data_test_timing_data, read_in_data_test_analysis_data
 
@@ -57,7 +58,8 @@ class google_chart_api_test_analysis_data:
         for row in analysis_chart_data[1:]:
             chart_data_str += '%s,\n' % row
 
-        completed_html = local_variables.html_string.substitute(labels=analysis_chart_data[0][1],
+        join_analysis_chart_data = ('\',\''.join(analysis_chart_data[0][1:]))
+        completed_html = local_variables.html_string.substitute(labels=join_analysis_chart_data,
                                                                 data=chart_data_str)
         file_date = date.today()
         with open('tests/test_docs/analysis_chart_' + str(file_date) + '.html', 'w') as f:

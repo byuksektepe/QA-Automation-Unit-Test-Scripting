@@ -6,8 +6,8 @@
               google.charts.setOnLoadCallback(drawChart);
               function drawChart () {
                   var data = new google.visualization.DataTable();
-                  data.addColumn('string', 'Element');
-                  data.addColumn('number', 'NumberOfAsserts');
+                  data.addColumn('string', 'Elemen');
+                  data.addColumn('number', 'NumberOfAsserts','NumberOfFailedAsserts');
                   data.addRows([
                     ['Test 1', 32, 2],
 ['Test 2', 31, 5],
