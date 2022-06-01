@@ -23,3 +23,14 @@
   <li>Analysis Chart 2022-06-02</li>
   <li>Timing Chart 2022-06-02</li>
  </ul>
+ 
+ ## Test Results [06/02/2022]
+ <p>Timing Chart</p>
+ ![TimingChart](https://user-images.githubusercontent.com/61010367/171517820-486569d3-e0c5-419a-997c-8076479ad755.png)
+ <br/>
+ <p>Analysis Chart</p>
+ ![AnalysisChart](https://user-images.githubusercontent.com/61010367/171517988-aaee919d-4075-47a9-9e07-3baedfcf435a.png)
+
+
+ 
+
