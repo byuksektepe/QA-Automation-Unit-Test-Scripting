@@ -1,5 +1,6 @@
 import requests
 from tests.read_in_data import read_in_data_test
+from tests.google_chart_api import google_chart_api_test
 
 class main:
 
@@ -59,5 +60,6 @@ class main:
 
 if __name__ == '__main__':
     read_in_data_test = read_in_data_test().start()
+    google_chart_api_test = google_chart_api_test().start()
     #main.ch1()
 

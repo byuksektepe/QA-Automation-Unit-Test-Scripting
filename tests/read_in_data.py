@@ -11,7 +11,7 @@ class read_in_data_test:
                 self.timing_data.append(row)
 
         column_chart_data = [["Test Name", "Diff from Avg"]]
-        table_data = [["Test Nme", "Run Time (s)"]]
+        table_data = [["Test Name", "Run Time (s)"]]
 
         for row in self.timing_data[1:]:
             test_name = row[0]

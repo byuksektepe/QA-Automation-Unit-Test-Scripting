@@ -1,4 +1,5 @@
 from string import Template
+from datetime import date
 from tests.read_in_data import read_in_data_test
 
 class google_chart_api_test:
@@ -30,3 +31,11 @@ class google_chart_api_test:
         </html>""")
 
         chart_data_str = ""
+        for row in column_chart_data[1:]:
+            chart_data_str += '%s, \n' % row
+
+        completed_html = html_string.substitute(labels= column_chart_data[0],
+                                                data= chart_data_str)
+        file_date = date.today()
+        with open('column_chart'+file_date+'.html', 'w') as f:
+            f.write(completed_html)
