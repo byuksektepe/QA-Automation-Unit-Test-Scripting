@@ -1,6 +1,6 @@
 import csv
 
-class read_in_data_test:
+class read_in_data_test_timing_data:
     timing_data = []
     def start(self):
 
@@ -34,4 +34,5 @@ class read_in_data_test:
         print(table_data)
 
         return (column_chart_data)
+    pass
 

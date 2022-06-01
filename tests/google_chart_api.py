@@ -1,12 +1,12 @@
 from string import Template
 from datetime import date
-from tests.read_in_data import read_in_data_test
+from tests.read_in_data import read_in_data_test_timing_data
 
-class google_chart_api_test:
+class google_chart_api_test_timing_data:
 
     def start(self):
 
-        column_chart_data = read_in_data_test().start()
+        column_chart_data = read_in_data_test_timing_data().start()
         html_string = Template("""<html>
         <head>
         <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
