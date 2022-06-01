@@ -37,7 +37,7 @@ class main:
         url = "https://api.github.com/user"
         response = requests.get(url)
 
-        response = requests.get(url, auth=('djw-test', 'password1'))
+        response = requests.get(url, auth=('berkant', '12345'))
         print(response.json())  #user data comes
     pass
 
