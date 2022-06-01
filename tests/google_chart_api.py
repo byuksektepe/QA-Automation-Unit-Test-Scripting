@@ -14,8 +14,12 @@ class local_variables:
               google.charts.setOnLoadCallback(drawChart);
               function drawChart () {
                   var data = new google.visualization.DataTable();
-                  data.addColumn('string', 'Element');
-                  data.addColumn('number', '$labels');
+                  data.addColumn('string');
+                  data.addColumn('number', '$label_one');
+                  if("$label_two" != "null"){
+                  data.addColumn('number', '$label_two');
+                  }
+                  
                   data.addRows([
                     $data
                   ]);
@@ -25,7 +29,7 @@ class local_variables:
             </script>
             </head>
             <body>
-            <div id="chart_div" style="width:800; height:600"></div>
+            <div id="chart_div" style="width:1100; height:680"></div>
             </body>
             </html>""")
 
@@ -40,8 +44,9 @@ class google_chart_api_test_timing_data:
         for row in timing_chart_data[1:]:
             chart_data_str += '%s,\n' % row
 
-        completed_html = local_variables.html_string.substitute(labels=timing_chart_data[0][1],
-                                                data=chart_data_str)
+        completed_html = local_variables.html_string.substitute(label_one=timing_chart_data[0][1],
+                                                                label_two="null",
+                                                                data=chart_data_str)
         file_date = date.today()
         with open('tests/test_docs/timing_chart_'+str(file_date)+'.html', 'w') as f:
             f.write(completed_html)
@@ -58,8 +63,9 @@ class google_chart_api_test_analysis_data:
         for row in analysis_chart_data[1:]:
             chart_data_str += '%s,\n' % row
 
-        join_analysis_chart_data = ('\',\''.join(analysis_chart_data[0][1:]))
-        completed_html = local_variables.html_string.substitute(labels=join_analysis_chart_data,
+        # join_analysis_chart_data = ('\',\''.join(analysis_chart_data[0][1:]))
+        completed_html = local_variables.html_string.substitute(label_one=analysis_chart_data[0][1],
+                                                                label_two=analysis_chart_data[0][2],
                                                                 data=chart_data_str)
         file_date = date.today()
         with open('tests/test_docs/analysis_chart_' + str(file_date) + '.html', 'w') as f:
