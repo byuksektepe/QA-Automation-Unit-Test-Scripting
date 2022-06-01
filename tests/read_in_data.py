@@ -27,7 +27,6 @@ class read_in_data_test_timing_data:
             except:
                 print(row[1], row[2])
 
-
             diff_from_avg = avg_run_time - current_run_time
 
             column_chart_data.append([test_name, diff_from_avg])
@@ -49,6 +48,15 @@ class read_in_data_test_analysis_data:
             file_read = csv.reader(test_csv_file)
 
             for row in file_read:
-                self._data.append(row)
+                self.analysis_data.append(row)
+
+        chart_data = [self.analysis_data[0]]
+        for row in self.analysis_data[1:]:
+            num_asserts = int(row[1])
+            num_failed_asserts = int(row[2])
+            chart_data.append([row[0], num_asserts, num_failed_asserts])
+
+        print(chart_data)
+        return (chart_data)
 
     pass

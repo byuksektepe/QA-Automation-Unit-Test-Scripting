@@ -1,7 +1,7 @@
 import time
 
 import requests
-from tests.read_in_data import read_in_data_test_timing_data
+from tests.read_in_data import read_in_data_test_timing_data, read_in_data_test_analysis_data
 from tests.google_chart_api import google_chart_api_test_timing_data
 
 class main:
@@ -61,7 +61,11 @@ class main:
 
 
 if __name__ == '__main__':
-    read_in_data_test = read_in_data_test_timing_data().start()
-    google_chart_api_test = google_chart_api_test_timing_data().start()
+    read_in_data_test_timing_data = read_in_data_test_timing_data().start()
+    google_chart_api_test_timing_data = google_chart_api_test_timing_data().start()
+
+    read_in_data_test_analysis_data = read_in_data_test_analysis_data().start()
+
+
     #main.ch1()
 
