@@ -1,4 +1,5 @@
 import requests
+from tests.read_in_data import read_in_data_test
 
 class main:
 
@@ -57,6 +58,6 @@ class main:
 
 
 if __name__ == '__main__':
-
-    main.ch1()
+    read_in_data_test = read_in_data_test().start()
+    #main.ch1()
 
