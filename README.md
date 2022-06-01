@@ -12,3 +12,9 @@
   <li>Test Timing Data</li>
   <li>Test Analysis Data</li>
  </ul>
+ 
+ <p>Generated Charts from <a href="https://github.com/Berkantyuks/QA-Automation-Unit-Test-Scripting/tree/main/tests/test_docs">tests/test_docs/charts</a></p>
+ <ul>
+  <li>Analysis Chart 2022-06-02</li>
+  <li>Timing Chart 2022-06-02</li>
+ </ul>
