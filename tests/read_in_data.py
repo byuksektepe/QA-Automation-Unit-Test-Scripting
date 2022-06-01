@@ -28,3 +28,6 @@ class read_in_data_test:
 
         print(column_chart_data)
         print(table_data)
+
+        return (column_chart_data)
+    pass
