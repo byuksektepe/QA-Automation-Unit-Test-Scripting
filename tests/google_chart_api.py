@@ -48,7 +48,7 @@ class google_chart_api_test_timing_data:
                                                                 label_two="null",
                                                                 data=chart_data_str)
         file_date = date.today()
-        with open('tests/test_docs/timing_chart_'+str(file_date)+'.html', 'w') as f:
+        with open('tests/test_docs/charts/timing_chart_'+str(file_date)+'.html', 'w') as f:
             f.write(completed_html)
     pass
 
@@ -68,6 +68,6 @@ class google_chart_api_test_analysis_data:
                                                                 label_two=analysis_chart_data[0][2],
                                                                 data=chart_data_str)
         file_date = date.today()
-        with open('tests/test_docs/analysis_chart_' + str(file_date) + '.html', 'w') as f:
+        with open('tests/test_docs/charts/analysis_chart_' + str(file_date) + '.html', 'w') as f:
             f.write(completed_html)
     pass
