@@ -28,7 +28,10 @@ class google_sheets_api_runtime_test:
 
         # read csv data
         csv_data = []
-        with open()
+        with open('./tests/test_docs/LatestTestRunData.csv') as csv_file:
+            file_read = csv.reader(csv_file)
+            for row in file_read:
+                csv_data.append(row)
 
     pass
 
