@@ -45,8 +45,8 @@ class selenium_data_scripting_test:
             # element bir süre sonra gözüktüğü için sync error almamak,
             # ve ürünün eklendiğini doğrulamak adına explicit wait kullandım
             try:
-                element_visible = EC.visibility_of_element_located((By.CSS_SELECTOR, ".continue.btn.btn-default.button.exclusive-medium"))
-                WebDriverWait(driver, 7).until(element_visible)
+                element_clickable = EC.element_to_be_clickable((By.CSS_SELECTOR, ".continue.btn.btn-default.button.exclusive-medium"))
+                WebDriverWait(driver, 7).until(element_clickable)
 
             except TimeoutException:
                 raise Exception("Timed out waiting for item load, Test Failed")
