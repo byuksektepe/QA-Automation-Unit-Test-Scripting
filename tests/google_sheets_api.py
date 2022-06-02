@@ -27,6 +27,8 @@ class google_sheets_api_runtime_test:
             run_times.append(row)
 
         # read csv data
+        csv_data = []
+        with open()
 
     pass
 
