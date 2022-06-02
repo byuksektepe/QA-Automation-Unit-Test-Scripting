@@ -10,13 +10,13 @@
  <ul>
   <li>Read Data From CSV file and directly convert to chart</li>
   <li>Read Data From CSV file and process data, convert to chart</li>
+  <li>Selenium Add Multiple Products to Cart Test</li>
  </ul>
  
  <p>Included Data Files from <a href="https://github.com/Berkantyuks/QA-Automation-Unit-Test-Scripting/tree/main/tests/test_docs">tests/test_docs</a></p>
  <ul>
   <li>Test Timing Data</li>
   <li>Test Analysis Data</li>
-  <li>Selenium Add Multiple Products to Cart Test</li>
  </ul>
  
  <p>Generated Charts from <a href="https://github.com/Berkantyuks/QA-Automation-Unit-Test-Scripting/tree/main/tests/test_docs">tests/test_docs/charts</a></p>
