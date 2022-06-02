@@ -37,10 +37,12 @@ class selenium_data_scripting_test:
             hover_action.perform()
 
             # selenium path indexi 0 dan değil 1 den başlıyor, bu yüzden index+1 verdim
-            add_to_chart_button = driver.find_element(By.XPATH, '//*[@id="center_column"]/ul/li[%s]/div/div[2]/div[2]/a[1]/span' % (index+1))
+            driver.find_element(By.XPATH, '//*[@id="center_column"]/ul/li[%s]/div/div[2]/div[2]/a[1]/span' % (index+1)).click()
 
             cont_shopping_button = driver.find_element(By.CSS_SELECTOR, ".continue.btn.btn-default.button.exclusive-medium")
 
+            # element bir süre sonra gözüktüğü için sync error almamak,
+            # ve ürünün eklendiğini doğrulamak adına explicit wait kullandım
             try:
                 element_visible = EC.visibility_of_element_located((By.CSS_SELECTOR, ".continue.btn.btn-default.button.exclusive-medium"))
                 WebDriverWait(driver, 5).until(element_visible)
