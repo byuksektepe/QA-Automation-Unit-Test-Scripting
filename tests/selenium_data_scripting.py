@@ -28,9 +28,9 @@ class selenium_data_scripting_test:
         driver.get(url)
 
         # Get all listed products
-        product_containers = driver.find_element(By.CLASS_NAME, "product-container")
+        product_containers = driver.find_elements(By.CLASS_NAME, "product-container")
 
-        for index, product_container in enumerate(product_containers):
+        for index,product_container in enumerate(product_containers):
 
             # Make hover action for see product price and details
             hover_action = ActionChains(driver).move_to_element(product_container)
@@ -46,7 +46,10 @@ class selenium_data_scripting_test:
             try:
                 element_visible = EC.visibility_of_element_located((By.CSS_SELECTOR, ".continue.btn.btn-default.button.exclusive-medium"))
                 WebDriverWait(driver, 5).until(element_visible)
+
             except TimeoutException:
                 raise Exception("Timed out waiting for item load, Test Failed")
+
             finally:
+                cont_shopping_button.click()
                 print(f"{Fore.GREEN}[PASS]{Style.RESET_ALL} Product Added: %s" % index)
