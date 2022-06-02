@@ -4,7 +4,7 @@ from datetime import date
 from tests.read_in_data import read_in_data_test_timing_data, read_in_data_test_analysis_data
 
 
-class local_variables:
+class global_variables:
 
     html_string = Template("""<html>
             <head>
@@ -44,7 +44,7 @@ class google_chart_api_test_timing_data:
         for row in timing_chart_data[1:]:
             chart_data_str += '%s,\n' % row
 
-        completed_html = local_variables.html_string.substitute(label_one=timing_chart_data[0][1],
+        completed_html = global_variables.html_string.substitute(label_one=timing_chart_data[0][1],
                                                                 label_two="null",
                                                                 data=chart_data_str)
         file_date = date.today()
@@ -64,7 +64,7 @@ class google_chart_api_test_analysis_data:
             chart_data_str += '%s,\n' % row
 
         # join_analysis_chart_data = ('\',\''.join(analysis_chart_data[0][1:]))
-        completed_html = local_variables.html_string.substitute(label_one=analysis_chart_data[0][1],
+        completed_html = global_variables.html_string.substitute(label_one=analysis_chart_data[0][1],
                                                                 label_two=analysis_chart_data[0][2],
                                                                 data=chart_data_str)
         file_date = date.today()
