@@ -3,8 +3,14 @@ from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.action_chains import ActionChains
 from webdriver_manager.chrome import ChromeDriverManager
 
+from selenium.webdriver.support.wait import WebDriverWait
+from selenium.common.exceptions import TimeoutException
+from selenium.webdriver.support import expected_conditions as EC
+
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
+
+from colorama import Fore, Style
 
 class chrome_driver:
 
@@ -24,8 +30,21 @@ class selenium_data_scripting_test:
         # Get all listed products
         product_containers = driver.find_element(By.CLASS_NAME, "product-container")
 
-        for product_container in product_containers:
+        for index, product_container in enumerate(product_containers):
 
             # Make hover action for see product price and details
             hover_action = ActionChains(driver).move_to_element(product_container)
-            hover_action.perform() # perform hover
+            hover_action.perform()
+
+            # selenium path indexi 0 dan değil 1 den başlıyor, bu yüzden index+1 verdim
+            add_to_chart_button = driver.find_element(By.XPATH, '//*[@id="center_column"]/ul/li[%s]/div/div[2]/div[2]/a[1]/span' % (index+1))
+
+            cont_shopping_button = driver.find_element(By.CSS_SELECTOR, ".continue.btn.btn-default.button.exclusive-medium")
+
+            try:
+                element_visible = EC.visibility_of_element_located((By.CSS_SELECTOR, ".continue.btn.btn-default.button.exclusive-medium"))
+                WebDriverWait(driver, 5).until(element_visible)
+            except TimeoutException:
+                raise Exception("Timed out waiting for item load, Test Failed")
+            finally:
+                print(f"{Fore.GREEN}[PASS]{Style.RESET_ALL} Product Added: %s" % index)
