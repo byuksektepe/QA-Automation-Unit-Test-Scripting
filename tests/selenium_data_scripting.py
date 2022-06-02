@@ -28,3 +28,4 @@ class selenium_data_scripting_test:
 
             # Make hover action for see product price and details
             hover_action = ActionChains(driver).move_to_element(product_container)
+            hover_action.perform() # perform hover
