@@ -3,6 +3,9 @@ from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.action_chains import ActionChains
 from webdriver_manager.chrome import ChromeDriverManager
 
+from selenium.webdriver.common.by import By
+from selenium.webdriver.common.keys import Keys
+
 class chrome_driver:
 
     def set(self):
@@ -17,3 +20,6 @@ class selenium_data_scripting_test:
 
         driver = chrome_driver.set(self)
         driver.get(url)
+
+        # Get all listed products
+        product_containers = driver.find_element(By.CLASS_NAME, "product-container")
