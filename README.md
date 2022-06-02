@@ -2,6 +2,9 @@
  ![Python](https://img.shields.io/badge/Python-000000?style=for-the-badge&logo=python&logoColor=white)
  ![Html5](https://img.shields.io/badge/HTML5-000000?style=for-the-badge&logo=html5&logoColor=white)
  ![Git](https://img.shields.io/badge/GIT-000000?style=for-the-badge&logo=git&logoColor=white)
+ ![Selenium](https://img.shields.io/badge/Selenium-000000?style=for-the-badge&logo=Selenium&logoColor=white)
+ ![GoogleSheets](https://img.shields.io/badge/Google%20Sheets-000000?style=for-the-badge&logo=google-sheets&logoColor=white)
+ ![ChromeDriver](https://img.shields.io/badge/Google_chrome-000000?style=for-the-badge&logo=Google-chrome&logoColor=white)
 
 
  <p>A QA Automation Unit Test for Data Science</p>
@@ -10,6 +13,7 @@
  <ul>
   <li>Read Data From CSV file and directly convert to chart</li>
   <li>Read Data From CSV file and process data, convert to chart</li>
+  <li>Selenium Add Multiple Products to Cart Test</li>
  </ul>
  
  <p>Included Data Files from <a href="https://github.com/Berkantyuks/QA-Automation-Unit-Test-Scripting/tree/main/tests/test_docs">tests/test_docs</a></p>
@@ -36,6 +40,14 @@
  <p style="font-size: 21px;">Analysis Chart ↓</p>
  
  ![AnalysisChart](https://user-images.githubusercontent.com/61010367/171517988-aaee919d-4075-47a9-9e07-3baedfcf435a.png)
+ 
+ ### Selenium Test Result[06/03/2022]
+ 
+ 
+ <p style="font-size: 21px;">Add multiple products to cart automation ↓</p>
+ 
+ ![Selenium](https://user-images.githubusercontent.com/61010367/171743048-3a8b40bc-daa6-4a3f-8e8a-236f32a4d4d7.png)
+
 
 
  
