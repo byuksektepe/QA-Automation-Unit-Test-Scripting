@@ -38,7 +38,7 @@
  
  ![AnalysisChart](https://user-images.githubusercontent.com/61010367/171517988-aaee919d-4075-47a9-9e07-3baedfcf435a.png)
  
- ### Selenium Test Results[06/03/2022]
+ ### Selenium Test Result[06/03/2022]
  
  
  <p style="font-size: 21px;">Add multiple products to cart automation ↓</p>
