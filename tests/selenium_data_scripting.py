@@ -38,6 +38,7 @@ class selenium_data_scripting_test:
 
             # selenium path indexi 0 dan değil 1 den başlıyor, bu yüzden index+1 verdim
             driver.find_element(By.XPATH, '//*[@id="center_column"]/ul/li[%s]/div/div[2]/div[2]/a[1]/span' % (index+1)).click()
+            item_name = driver.find_element(By.XPATH, '//*[@id="center_column"]/ul/li[%s]/div/div[2]/h5/a' % (index+1)).text
 
             cont_shopping_button = driver.find_element(By.CSS_SELECTOR, ".continue.btn.btn-default.button.exclusive-medium")
 
@@ -52,4 +53,4 @@ class selenium_data_scripting_test:
 
             finally:
                 cont_shopping_button.click()
-                print(f"{Fore.GREEN}[PASS]{Style.RESET_ALL} Product Added: %s" % index)
+                print(f"{Fore.GREEN}[PASS]{Style.RESET_ALL} Product Added: %s" % index + " - Item Name: %s" % item_name)
