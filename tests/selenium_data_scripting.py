@@ -46,7 +46,7 @@ class selenium_data_scripting_test:
             # ve ürünün eklendiğini doğrulamak adına explicit wait kullandım
             try:
                 element_visible = EC.visibility_of_element_located((By.CSS_SELECTOR, ".continue.btn.btn-default.button.exclusive-medium"))
-                WebDriverWait(driver, 5).until(element_visible)
+                WebDriverWait(driver, 7).until(element_visible)
 
             except TimeoutException:
                 raise Exception("Timed out waiting for item load, Test Failed")
