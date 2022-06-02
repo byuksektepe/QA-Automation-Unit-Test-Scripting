@@ -51,7 +51,7 @@ class selenium_data_scripting_test:
             except TimeoutException:
                 # raise Exception("Timed out waiting for item load, Test Failed")
                 # Ekleyemediği ürün olursa testi durdurmasın bir sonraki üründen devam etsin, exception kaldırıldı.
-                print(f"{Fore.RED}[FAIL]{Style.RESET_ALL} Product Added: %s" % index + " - Item Name: %s" % item_name)
+                print(f"{Fore.RED}[FAIL]{Style.RESET_ALL} Product failed: %s" % index + " - Item Name: %s" % item_name)
 
                 continue
 
