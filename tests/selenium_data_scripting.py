@@ -23,3 +23,8 @@ class selenium_data_scripting_test:
 
         # Get all listed products
         product_containers = driver.find_element(By.CLASS_NAME, "product-container")
+
+        for product_container in product_containers:
+
+            # Make hover action for see product price and details
+            hover_action = ActionChains(driver).move_to_element(product_container)
