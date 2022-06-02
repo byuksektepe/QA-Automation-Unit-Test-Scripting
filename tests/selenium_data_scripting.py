@@ -54,3 +54,4 @@ class selenium_data_scripting_test:
             finally:
                 cont_shopping_button.click()
                 print(f"{Fore.GREEN}[PASS]{Style.RESET_ALL} Product Added: %s" % index + " - Item Name: %s" % item_name)
+    pass
