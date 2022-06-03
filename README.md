@@ -13,6 +13,7 @@
  <ul>
   <li>Read Data From CSV file and directly convert to chart</li>
   <li>Read Data From CSV file and process data, convert to chart</li>
+  <li>Analyze Jira Data and convert to chart Test</li>
   <li>Selenium Add Multiple Products to Cart Test</li>
  </ul>
  
@@ -20,6 +21,8 @@
  <ul>
   <li>Test Timing Data</li>
   <li>Test Analysis Data</li>
+  <li>Latest Test Run Data Data</li>
+  <li>Jira Data</li>
  </ul>
  
  <p>Generated Charts from <a href="https://github.com/Berkantyuks/QA-Automation-Unit-Test-Scripting/tree/main/tests/test_docs">tests/test_docs/charts</a></p>
