@@ -21,7 +21,7 @@
  <ul>
   <li>Test Timing Data</li>
   <li>Test Analysis Data</li>
-  <li>Latest Test Run Data Data</li>
+  <li>Latest Test Run Data</li>
   <li>Jira Data</li>
  </ul>
  
