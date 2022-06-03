@@ -26,6 +26,7 @@
  <ul>
   <li>Analysis Chart 2022-06-02</li>
   <li>Timing Chart 2022-06-02</li>
+  <li>Status Pie Chart 2022-06-03</li>
  </ul>
  
  ### Test Results [06/02/2022]
@@ -40,6 +41,13 @@
  <p style="font-size: 21px;">Analysis Chart ↓</p>
  
  ![AnalysisChart](https://user-images.githubusercontent.com/61010367/171517988-aaee919d-4075-47a9-9e07-3baedfcf435a.png)
+ 
+ <br/>
+ 
+ <p style="font-size: 21px;">Status Pie Chart ↓</p>
+ 
+ ![StatusPieChart](https://user-images.githubusercontent.com/61010367/171871168-e8822479-e0c3-43b3-8911-db7e2c45b53d.png)
+
  
  ### Selenium Test Result[06/03/2022]
  
