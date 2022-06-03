@@ -2,6 +2,7 @@ from string import Template
 from itertools import chain
 from datetime import date
 from tests.read_in_data import read_in_data_test_timing_data, read_in_data_test_analysis_data
+from tests.analyze_jira_data import analyze_jira_data_test
 
 
 class global_variables:
@@ -106,3 +107,8 @@ class google_chart_api_test_analysis_data:
         with open('tests/test_docs/charts/analysis_chart_' + str(file_date) + '.html', 'w') as f:
             f.write(completed_html)
     pass
+
+class google_chart_api_test_jira_data:
+
+    def start(self):
+        jira_data = analyze_jira_data_test().start()

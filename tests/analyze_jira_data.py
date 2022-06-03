@@ -28,3 +28,6 @@ class analyze_jira_data_test:
                     status_counts[status] = status_counts[status] + 1
 
         print(status_counts)
+
+        return status_counts
+    pass
