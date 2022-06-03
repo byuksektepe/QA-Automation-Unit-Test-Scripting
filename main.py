@@ -5,6 +5,7 @@ from tests.read_in_data import read_in_data_test_timing_data, read_in_data_test_
 from tests.google_chart_api import google_chart_api_test_timing_data, google_chart_api_test_analysis_data
 from tests.google_sheets_api import google_sheets_api_runtime_test
 from tests.selenium_data_scripting import selenium_data_scripting_test
+from tests.analyze_jira_data import analyze_jira_data_test
 
 class main:
 
@@ -72,6 +73,7 @@ if __name__ == '__main__':
 
     # google_sheets_api_runtime_test = google_sheets_api_runtime_test().start()
 
-    selenium_data_scripting_test = selenium_data_scripting_test().start()
+    # selenium_data_scripting_test = selenium_data_scripting_test().start()
+    analyze_jira_data_test = analyze_jira_data_test().start()
 
 
