@@ -34,7 +34,7 @@ class global_variables:
             </body>
             </html>""")
 
-    html_string_pie = """
+    html_string_pie = Template("""
     <html>
       <head>
         <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
@@ -45,16 +45,12 @@ class global_variables:
           function drawChart() {
     
             var data = google.visualization.arrayToDataTable([
-              ['Task', 'Hours per Day'],
-              ['Work',     11],
-              ['Eat',      2],
-              ['Commute',  2],
-              ['Watch TV', 2],
-              ['Sleep',    7]
+              ['Status', 'Number of Issues'],
+               $status_data_in
             ]);
     
             var options = {
-              title: 'My Daily Activities'
+              title: 'Issues By Status'
             };
     
             var chart = new google.visualization.PieChart(document.getElementById('piechart'));
@@ -67,7 +63,7 @@ class global_variables:
         <div id="piechart" style="width: 900px; height: 500px;"></div>
       </body>
     </html>
-    """
+    """)
 
 
 class google_chart_api_test_timing_data:
@@ -111,4 +107,16 @@ class google_chart_api_test_analysis_data:
 class google_chart_api_test_jira_data:
 
     def start(self):
-        jira_data = analyze_jira_data_test().start()
+        status_data = analyze_jira_data_test().start()
+
+        formatted_data = ''
+        for stat in status_data.keys():
+            formatted_data += "['%s', %s],\n" % (stat, status_data[stat])
+
+        print(formatted_data)
+
+        completed_html = global_variables.html_string_pie.substitute(status_data_in=formatted_data)
+
+        file_date = date.today()
+        with open('tests/test_docs/charts/status_pie_chart_' + str(file_date) + '.html', 'w') as f:
+            f.write(completed_html)
